@@ -1,0 +1,172 @@
+/* Set the min-width so that when the window is resized the look will stay consistant */
+
+.charsheet {
+	background-color: #ddd;
+	min-width: 800px;
+	max-width: 800px;
+	padding:0;
+	margin:0;
+}
+
+
+/*                                                          EN TETE                                                          */
+
+.sheet-entete-colonne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sheet-entete-souscolonne {
+  display: flex;
+  flex-direction: column;
+  width:33%;
+}
+.sheet-entete-leftrow{
+  display: flex;
+  align-items: baseline;
+}
+.sheet-entete-middlerow{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width:50%;
+}
+.sheet-entete-rightrow{
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+.sheet-entete-mainrow{
+  display:flex;
+  align-items: baseline;
+}
+input.sheet-entete{
+	width: 75%;
+}
+input.sheet-entete-middle {
+  width: 30%;
+}
+label.sheet-entete{
+  display: flex;
+  width:25%;
+}
+label.sheet-entete-middle{
+  display: flex;
+  justify-content: flex-end;
+  width: 25%;
+}
+label.sheet-slash{
+  display: flex;
+  width: 1%;
+  margin-left: 4%;
+}
+
+
+/*                                                          TABS SETUP                                                          */
+/*Style des Tabs buttons*/
+.sheet-tabs{
+    display: flex;
+  justify-content: center;
+}
+button.sheet-tab{
+	width: 20%; 
+}
+/*Configure the tab buttons*/
+.sheet-attributes,
+.sheet-inventaire,
+.sheet-competences {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="attributes"] ~ div.sheet-attributes,
+.sheet-tabstoggle[value="inventaire"] ~ div.sheet-inventaire,
+.sheet-tabstoggle[value="competences"] ~ div.sheet-competences {
+	display: block;
+}
+/*                                                          TAB: STATS                                                          */
+.sheet-title{
+    display: flex;
+    justify-content: center;
+}
+
+.sheet-att-colonne {
+  display: flex;
+  justify-content: space-between;
+}
+.sheet-att-souscolonne{
+  display: flex;
+  flex-direction: column;
+  
+  width: 33%;
+}
+.sheet-att-row{
+  display: flex;
+    align-items: baseline;
+}
+.sheet-att-name{
+    display: flex;
+    justify-content: flex-end;
+    width: 34%;
+}
+.sheet-att-value{
+  width: 15%
+}
+.sheet-att-check{
+    width: 10%;
+}
+
+/*                                                          Roll Button                                                          */
+button[type=roll]{
+    padding:0;
+    display: flex;
+    align-self: flex-start;
+}
+button[type=roll].sheet-att-roll-button::before {
+    content: '0';
+  
+}
+/*                                                          TAB: Inventaire                                                          */
+.sheet-inv-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sheet-inv-cattitle{
+    display: flex;
+}
+
+.sheet-inv-bourse{
+    width: 100%;
+    height: 75%;
+}
+
+
+
+
+/*                                                          DEBUG                                                          */
+/*Debug Info Box*/
+div.sheet-debug-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+input.sheet-toggle-show:not(:checked) ~ div.sheet-debug{
+      display: none;
+}
+
+.sheet-debug{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column
+}
+.sheet-debug-value{
+    width: 15%
+}
+.sheet-debug-code{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
