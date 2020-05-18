@@ -267,7 +267,7 @@ setAttrs({
             "debug": "02-01"
         });
     });
-    const stats = ['force','endurance','presence','forge','intelligence','magie','erudition','alchimie','agilite','discretion','discretion','perception','ebeniste'];
+    const stats = ['force','endurance','presence','forge','intelligence','magie','erudition','alchimie','agilite','discretion','perception','ebeniste'];
     stats.forEach(function (stat) {
         on("change:" + stat + " change:" + stat + "-bonus change:" + stat + "-bonus-check sheet:opened", function () {
             setAttrs({
