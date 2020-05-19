@@ -204,18 +204,27 @@
 <!--                                                          Deuxième tab: Inventaire                                                          -->
 <div class='sheet-inventaire'>
     <div class="sheet-inv-row">
-        <div>
-            <div>Inventaire:</div>
+        <div class="sheet-inv-main">
+            <label class="sheet-inv-slot1title">Inventaire:</label>
             <textarea name="attr_text-slot1" class="sheet-inv-slot1"></textarea>
         </div>
-        <div>
-            <div>Poche Secrète:</div>
-            <textarea name="attr_text-slot2" class="sheet-inv-slot2"></textarea>
+
+        <div class="sheet-inv-second">
+            <div class="sheet-inv-boursebox">
+                <label class="sheet-inv-boursetitle">Bourse:</label>
+                <div class="sheet-inv-bourse">
+                    <label class="sheet-inv-type"><input type="text" name="attr_inv-platinum" class="sheet-inv-bourse-input" value="000"/>P</label>
+                    <label class="sheet-inv-type"><input type="text" name="attr_inv-or" class="sheet-inv-bourse-input" value="000" />O</label>
+                    <label class="sheet-inv-type"><input type="text" name="attr_inv-argent" class="sheet-inv-bourse-input" value="000"/>A</label>
+                    <label class="sheet-inv-type"><input type="text" name="attr_inv-bronze" class="sheet-inv-bourse-input" value="000"/>B</label>
+                </div>
+            </div>
+            <div>
+                <label class="sheet-inv-slot2title">Poche Secrète:</label>
+                <textarea name="attr_text-slot2" class="sheet-inv-slot2"></textarea>
+            </div>
         </div>
-        <div>
-            <div>Bourse:</div>
-            <textarea name="attr_text-bourse" class="sheet-inv-bourse">000P 000G 000A 000B</textarea>
-        </div>
+
     </div>
 </div>
 
