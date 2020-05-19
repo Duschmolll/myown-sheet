@@ -41,7 +41,7 @@
             <input type="text" name="attr_setting" class="sheet-entete" />
         </div>
         <div class="sheet-entete-rightrow">
-            <label class="sheet-entete">Level:</label>
+            <label class="sheet-entete">Profess:</label>
             <input type="text" name="attr_race" class="sheet-entete" />
         </div>
     </div>
@@ -55,7 +55,7 @@
     <button type="action" name="act_inventaire" class='sheet-tab'>Inventaire</button>
     <button type="action" name="act_competences" class='sheet-tab'>Compétences</button>
 </div>
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='inventaire' />
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='attributes' />
 
 <br />
 
@@ -98,7 +98,7 @@
             </div>
             <!--Forge-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Arti. Rigide</label><input type="text" name='attr_forge' value="0" 
+                <label class="sheet-att-name">Arti.Complex</label><input type="text" name='attr_forge' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                     value='&{template:default} {{name=@{character_name}}} {{Forge: [[@{forge-result}]] | Jet: [[1d100]]}}'></button>
@@ -189,7 +189,7 @@
             <br />
             <!--Ébeniste-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Arti. Souple</label><input type="text" name='attr_ebeniste' value="0" 
+                <label class="sheet-att-name">Arti. Simple</label><input type="text" name='attr_ebeniste' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                     value='&{template:default} {{name=@{character_name}}} {{Ébéniste: [[@{ebeniste-result}]] | Jet: [[1d100]]}}'></button>
@@ -242,7 +242,7 @@
             <label class="sheet-debug-code">Debug WIP:</label>
             <input type="text" name='attr_debug-WIP' class="sheet-debug-value" />
         </div>
-        <label class="sheet-debug-code">Version: 1.1.5</label>
+        <label class="sheet-debug-code">Version: 1.2.0</label>
     </div>
 </div>
 
