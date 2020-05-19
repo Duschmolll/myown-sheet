@@ -97,7 +97,6 @@ button.sheet-tab{
 .sheet-att-souscolonne{
   display: flex;
   flex-direction: column;
-  
   width: 33%;
 }
 .sheet-att-row{
@@ -132,13 +131,45 @@ button[type=roll].sheet-att-roll-button::before {
     justify-content: space-around;
 }
 
-.sheet-inv-cattitle{
-    display: flex;
+.sheet-inv-main{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
 }
+.sheet-inv-second{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.sheet-inv-boursebox{
+  height: 25%
+}
+.sheet-inv-slot2title,
+.sheet-inv-boursetitle,
+.sheet-inv-slot1title{
+  display: flex;
+  justify-content: center;
 
+}
 .sheet-inv-bourse{
-    width: 100%;
-    height: 75%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between; 
+}
+.sheet-inv-type{
+  display: flex;
+  align-items: baseline; 
+}
+input.sheet-inv-bourse-input{
+  width: 80%;
+}
+.sheet-inv-slot1{
+  width: 98%;
+  height: 200%;
+}
+.sheet-inv-slot2{
+  width: 100%;
 }
 
 
