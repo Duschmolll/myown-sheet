@@ -55,7 +55,7 @@
     <button type="action" name="act_inventaire" class='sheet-tab'>Inventaire</button>
     <button type="action" name="act_competences" class='sheet-tab'>Compétences</button>
 </div>
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='attributes' />
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='competences' />
 
 <br />
 
@@ -228,6 +228,17 @@
     </div>
 </div>
 
+<!--                                                          Troisième tab: Compétences                                                          -->
+
+<div class='sheet-competences'>
+    <fieldset class="repeating_skills"> 
+        <input type="text" name="attr_skillname" /> 
+        <button type='roll' name='roll_testattack'
+                    value="@{skillname}"></button>
+      </fieldset>
+</div>
+
+
 <!--                                                          Debug Info Box                                                          -->
 
 <div class="sheet-debug-wrapper">
@@ -245,6 +256,7 @@
         <label class="sheet-debug-code">Version: 1.2.0</label>
     </div>
 </div>
+
 
 <!--                                                          Script Zone                                                          -->
 
@@ -325,3 +337,5 @@ on("sheet:opened", function(){
     })
 
 </script>
+
+<!--                                                          Roll Template                                                          -->
