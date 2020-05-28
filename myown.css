@@ -257,6 +257,10 @@ input.sheet-toggle-show:not(:checked) ~ div.sheet-debug{
   cursor: help;
   font-size: 1.1em;
 }
+.sheet-rolltemplate-stat .inlinerollresult.fullcrit,
+.sheet-rolltemplate-stat .inlinerollresult.fullfail {
+  border: 2px solid rgba(63, 179, 21, 0);
+}
 .sheet-rolltemplate-stat .sheet-template-success {
   display: flex;
   justify-content: center;
