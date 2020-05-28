@@ -71,7 +71,7 @@
                 <label class="sheet-att-name">Force</label>
                 <input type="text" name='attr_force' value='0' class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Force: [[@{force-result}]] | Jet: [[1d100]]}}'></button>
+                    value='&{template:stat} {{statname=Force}} {{statvalue= [[@{force-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_force-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_force-bonus-check" checked="true" class="sheet-att-check" value="1" />
             </div>
@@ -81,7 +81,7 @@
                 <label class="sheet-att-name">Endurance</label>
                 <input type="text" name='attr_endurance'value="0" class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Endurance: [[@{endurance-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Endurance}} {{statvalue= [[@{endurance-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_endurance-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_endurance-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -91,7 +91,7 @@
                 <label class="sheet-att-name">Présence</label><input type="text" name='attr_presence' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Présence: [[@{presence-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Présence}} {{statvalue= [[@{presence-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_presence-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_presence-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -101,7 +101,7 @@
                 <label class="sheet-att-name">Arti.Complex</label><input type="text" name='attr_forge' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Forge: [[@{forge-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Atri. Complex}} {{statvalue= [[@{forge-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_forge-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_forge-bonus-check" checked="true" class="sheet-att-check" value="1" />
             </div>
@@ -113,7 +113,7 @@
                 <label class="sheet-att-name">Intelligence</label><input type="text" name='attr_intelligence' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Intelligence: [[@{intelligence-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Intelligence}} {{statvalue= [[@{intelligence-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_intelligence-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_intelligence-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -123,7 +123,7 @@
             <div class="sheet-att-row">
                 <label class="sheet-att-name">Magie</label><input type="text" name='attr_magie' class='sheet-att-value' value="0" >
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Magie: [[@{magie-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Magie}} {{statvalue= [[@{magie-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_magie-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_magie-bonus-check" checked="true" class="sheet-att-check" value="1" />
             </div>
@@ -133,7 +133,7 @@
                 <label class="sheet-att-name">Érudition</label><input type="text" name='attr_erudition' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Érudition: [[@{erudition-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Érudition}} {{statvalue= [[@{erudition-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_erudition-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_erudition-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -144,7 +144,7 @@
                 <label class="sheet-att-name">Alchimie</label><input type="text" name='attr_alchimie' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Alchimie: [[@{alchimie-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Alchimie}} {{statvalue= [[@{alchimie-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_alchimie-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_alchimie-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -158,7 +158,7 @@
                 <label class="sheet-att-name">Agilité</label><input type="text" name='attr_agilite' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Agilité: [[@{agilite-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Agilité}} {{statvalue= [[@{agilite-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_agilite-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_agilite-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -169,7 +169,7 @@
                 <label class="sheet-att-name">Discrétion</label><input type="text" name='attr_discretion' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Discrétion: [[@{discretion-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Discretion}} {{statvalue= [[@{discretion-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_discretion-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_discretion-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -181,7 +181,7 @@
                 <label class="sheet-att-name">Perception</label><input type="text" name='attr_perception' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Perception: [[@{perception-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Perception}} {{statvalue= [[@{perception-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_perception-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_perception-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -192,7 +192,7 @@
                 <label class="sheet-att-name">Arti. Simple</label><input type="text" name='attr_ebeniste' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Ébéniste: [[@{ebeniste-result}]] | Jet: [[1d100]]}}'></button>
+                value='&{template:stat} {{statname=Arti. Simple}} {{statvalue= [[@{ebeniste-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_ebeniste-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_ebeniste-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
@@ -228,6 +228,60 @@
     </div>
 </div>
 
+<!--                                                          Troisième tab: Compétences                                                          -->
+
+<div class='sheet-competences'>
+    <div class="sheet-competence-divider">
+        <fieldset class="repeating_skills">
+            <div class="sheet-competence-row">
+                <select name="attr_type-de-jet" class="sheet-competence-select">
+                    <optgroup label="Type de jet">
+                        <option value="-1" selected="selected">--</option>
+                        <option value="1d100">Dé 100</option>
+                        <option value="1d20">Dé 20</option>
+                        <option value="1d12">Dé 12</option>
+                        <option value="1d10">Dé 10</option>
+                        <option value="1d8">Dé 8</option>
+                        <option value="1d6">Dé 6</option>
+                        <option value="1d4">Dé 4</option>
+                    </optgroup>
+                </select>
+                <input type="text" name="attr_skillname" class="sheet-competence-name" />
+                <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
+                    value='&{template:abilitie} {{abilitiename=@{skillname}}} {{jet=[[@{type-de-jet}]]}} {{description=@{text-description}}}'></button>
+            </div>
+            <div class="sheet-competence-row">
+                <textarea name="attr_text-description" class="sheet-competence-description"></textarea>
+            </div>
+        </fieldset>
+
+      
+        <fieldset class="repeating_skills-2">
+            <div class="sheet-competence-row">
+                <select name="attr_type-de-jet-2" class="sheet-competence-select">
+                    <optgroup label="Type de jet">
+                        <option value="-1" selected="selected">--</option>
+                        <option value="1d100">Dé 100</option>
+                        <option value="1d20">Dé 20</option>
+                        <option value="1d12">Dé 12</option>
+                        <option value="1d10">Dé 10</option>
+                        <option value="1d8">Dé 8</option>
+                        <option value="1d6">Dé 6</option>
+                        <option value="1d4">Dé 4</option>
+                    </optgroup>
+                </select>
+                <input type="text" name="attr_skillname-2" class="sheet-competence-name" />
+                <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
+                    value='&{template:abilitie} {{abilitiename=@{skillname-2}}} {{jet=[[@{type-de-jet-2}]]}} {{description=@{text-description-2}}}'></button>
+            </div>
+            <div class="sheet-competence-row">
+                <textarea name="attr_text-description-2" class="sheet-competence-description"></textarea>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
 <!--                                                          Debug Info Box                                                          -->
 
 <div class="sheet-debug-wrapper">
@@ -242,18 +296,19 @@
             <label class="sheet-debug-code">Debug WIP:</label>
             <input type="text" name='attr_debug-WIP' class="sheet-debug-value" />
         </div>
-        <label class="sheet-debug-code">Version: 1.2.0</label>
+        <label class="sheet-debug-code">Version: 1.3.5</label>
     </div>
 </div>
+
 
 <!--                                                          Script Zone                                                          -->
 
 <script type="text/worker">
 on("sheet:opened", function(){
-setAttrs({
-    "debug": "00-01"
-    "debug-WIP" "00-01"
-});
+    setAttrs({
+        "debug": "00-01"
+        "debug-WIP" "00-01"
+    });
 });
 </script>
 
@@ -325,3 +380,35 @@ setAttrs({
     })
 
 </script>
+
+<!--                                                          Roll Template                                                          -->
+
+<!-- Roll Template des Stats-->
+<rolltemplate class="sheet-rolltemplate-stat">
+    <div class="sheet-template-boite">
+        <div class="sheet-template-titre">{{statname}}</div>
+        <div class="sheet-template-comparatif">
+            <div class="sheet-template-jet">{{jet}}</div>
+            <div class="sheet-template-stat">{{statvalue}}</div>
+        </div>
+        {{#rollLess() jet statvalue }}
+        <div class="sheet-template-success">Succès</div>
+        {{/rollLess() jet statvalue }}
+        {{#^rollLess() jet statvalue }}
+        <div class="sheet-template-fail">Raté</div>
+        {{/^rollLess() jet statvalue }}
+    </div>
+</rolltemplate>
+
+<!-- Roll Template des Abilities-->
+<rolltemplate class="sheet-rolltemplate-abilitie">
+    <div class="sheet-template-boite">
+        <div class="sheet-template-titre">{{abilitiename}}</div>
+            {{#^rollLess() jet 0}}
+            <div class="sheet-template-jet">{{jet}}</div>
+            {{/^rollLess() jet 0}}
+        <div class="sheet-template-description">
+            {{description}}
+        </div>
+    </div>
+</rolltemplate>
