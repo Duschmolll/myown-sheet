@@ -204,6 +204,7 @@ input.sheet-toggle-show:not(:checked) ~ div.sheet-debug{
 
 
 /*                                                          ROLL TEMPLATE                                                          */
+/*Roll Template Stat*/
 
 .sheet-rolltemplate-stat div.sheet-template-boite {
   display: flex;
@@ -277,3 +278,56 @@ input.sheet-toggle-show:not(:checked) ~ div.sheet-debug{
   line-height: 1.6em;
 	font-size: 1.2em;
 }
+
+/*Roll Template Abitlies*/
+
+.sheet-rolltemplate-abilitie div.sheet-template-boite {
+  display: flex;
+  flex-direction: column;
+	border: 2px solid #000 !important;
+  border-radius: 3px 3px 3px 3px;
+  color: white;
+  border-bottom: 0px;
+}
+
+.sheet-rolltemplate-abilitie .sheet-template-titre {
+  display: flex;
+  justify-content: center;
+	background-color: #3c3f4b;
+	padding: 2px;
+  border-bottom: 2px solid black;
+	line-height: 1.6em;
+  font-size: 1.1em;
+}
+
+.sheet-rolltemplate-abilitie .sheet-template-jet{
+  display: flex;
+  flex-direction: column;
+  background-color: #454958;
+  align-items: center;
+  border-bottom: 2px solid black;
+  line-height: 2.4em;
+  font-size: 1.2em;
+}
+
+.sheet-rolltemplate-abilitie .sheet-template-description {
+  display: flex;
+  background-color: #505566;
+  line-height: 1.6em;
+  font-size: 0.8em;
+  padding: 3px;
+}
+
+.sheet-rolltemplate-abilitie .inlinerollresult {
+  background-color: #3C3A2900;
+  border: 2px solid #FFF0;
+  padding: 0 3px 0 3px;
+  font-weight: bold;
+  cursor: help;
+  font-size: 1.1em;
+}
+.sheet-rolltemplate-abilitie .inlinerollresult.fullcrit,
+.sheet-rolltemplate-abilitie .inlinerollresult.fullfail {
+  border: 2px solid rgba(63, 179, 21, 0);
+}
+

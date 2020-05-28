@@ -231,10 +231,23 @@
 <!--                                                          Troisième tab: Compétences                                                          -->
 
 <div class='sheet-competences'>
-    <fieldset class="repeating_skills"> 
+    <fieldset class="repeating_skills">
+        <select name="attr_type-de-jet">
+            <optgroup label="Type de jet">
+                <option value="-1" selected="selected">--</option>
+                <option value="1d100">Dé 100</option>
+                <option value="1d20">Dé 20</option>
+                <option value="1d12">Dé 12</option>
+                <option value="1d10">Dé 10</option>
+                <option value="1d8">Dé 8</option>
+                <option value="1d6">Dé 6</option>
+                <option value="1d4">Dé 4</option>
+            </optgroup>
+        </select>
         <input type="text" name="attr_skillname" /> 
-        <button type='roll' name='roll_testattack'
-                    value="@{skillname}"></button>
+        <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
+            value='&{template:abilitie} {{abilitiename=@{skillname}}} {{jet=[[@{type-de-jet}]]}} {{description=@{text-description}}}'></button>
+        <textarea name="attr_text-description"></textarea>
       </fieldset>
 </div>
 
@@ -347,11 +360,25 @@ on("sheet:opened", function(){
         <div class="sheet-template-comparatif">
             <div class="sheet-template-jet">{{jet}}</div>
             <div class="sheet-template-stat">{{statvalue}}</div>
-          </div>
+        </div>
         {{#rollLess() jet statvalue }}
         <div class="sheet-template-success">Succès</div>
         {{/rollLess() jet statvalue }}
         {{#^rollLess() jet statvalue }}
         <div class="sheet-template-fail">Raté</div>
         {{/^rollLess() jet statvalue }}
+    </div>
+</rolltemplate>
+
+<!-- Roll Template des Abilities-->
+<rolltemplate class="sheet-rolltemplate-abilitie">
+    <div class="sheet-template-boite">
+        <div class="sheet-template-titre">{{abilitiename}}</div>
+            {{#^rollLess() jet 0}}
+            <div class="sheet-template-jet">{{jet}}</div>
+            {{/^rollLess() jet 0}}
+        <div class="sheet-template-description">
+            {{description}}
+        </div>
+    </div>
 </rolltemplate>
