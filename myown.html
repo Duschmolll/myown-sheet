@@ -71,7 +71,7 @@
                 <label class="sheet-att-name">Force</label>
                 <input type="text" name='attr_force' value='0' class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
-                    value='&{template:default} {{name=@{character_name}}} {{Force: [[@{force-result}]] | Jet: [[1d100]]}}'></button>
+                    value='&{template:stat} {{statname=Force}} {{statvalue= [[@{force-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_force-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_force-bonus-check" checked="true" class="sheet-att-check" value="1" />
             </div>
@@ -339,3 +339,19 @@ on("sheet:opened", function(){
 </script>
 
 <!--                                                          Roll Template                                                          -->
+
+<!-- Roll Template des Stats-->
+<rolltemplate class="sheet-rolltemplate-stat">
+    <div class="sheet-template-boite">
+        <div class="sheet-template-titre">{{statname}}</div>
+        <div class="sheet-template-comparatif">
+            <div class="sheet-template-jet">{{jet}}</div>
+            <div class="sheet-template-stat">{{statvalue}}</div>
+          </div>
+        {{#rollLess() jet statvalue }}
+        <div class="sheet-template-success">Succes</div>
+        {{/rollLess() jet statvalue }}
+        {{#^rollLess() jet statvalue }}
+        <div class="sheet-template-fail">Raté</div>
+        {{/^rollLess() jet statvalue }}
+</rolltemplate>
