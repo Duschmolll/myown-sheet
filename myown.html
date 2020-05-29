@@ -394,12 +394,12 @@ on("sheet:opened", function(){
             <div class="sheet-template-jet">{{jet}}</div>
             <div class="sheet-template-stat">{{statvalue}}</div>
         </div>
-        {{#rollLess() jet statvalue }}
-        <div class="sheet-template-success">Succès</div>
-        {{/rollLess() jet statvalue }}
-        {{#^rollLess() jet statvalue }}
+        {{#rollGreater() jet statvalue }}
         <div class="sheet-template-fail">Raté</div>
-        {{/^rollLess() jet statvalue }}
+        {{/rollGreater() jet statvalue }}
+        {{#^rollGreater() jet statvalue }}
+        <div class="sheet-template-success">Succès</div>
+        {{/^rollGreater() jet statvalue }}
     </div>
 </rolltemplate>
 
