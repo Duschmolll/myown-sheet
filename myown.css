@@ -84,6 +84,50 @@ button.sheet-tab{
 .sheet-tabstoggle[value="competences"] ~ div.sheet-competences {
 	display: block;
 }
+
+/*                                                          TABS INFO SETUP                                                          */
+button.sheet-info{
+  display: flex;
+  justify-content: flex-end;
+  width: 34%;
+}
+
+/*Configure the tab buttons*/
+.sheet-info-force,
+.sheet-info-endurance,
+.sheet-info-presence,
+.sheet-info-forge,
+.sheet-info-intelligence,
+.sheet-info-magie,
+.sheet-info-erudition,
+.sheet-info-alchimie,
+.sheet-info-agilite,
+.sheet-info-discretion,
+.sheet-info-perception,
+.sheet-info-ebeniste {
+  display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-force"] ~ div.sheet-info-force,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-endurance"] ~ div.sheet-info-endurance,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-presence"] ~ div.sheet-info-presence,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-forge"] ~ div.sheet-info-forge,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-intelligence"] ~ div.sheet-info-intelligence,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-magie"] ~ div.sheet-info-magie,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-erudition"] ~ div.sheet-info-erudition,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-alchimie"] ~ div.sheet-info-alchimie,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-agilite"] ~ div.sheet-info-agilite,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-discretion"] ~ div.sheet-info-discretion,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-perception"] ~ div.sheet-info-perception,
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="bt-ebeniste"] ~ div.sheet-info-ebeniste {
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet-tabstoggle[value="attributes"] ~ .sheet-infotoggle[value="none"] ~ div.sheet-info-ebeniste {
+  display:none;
+}
 /*                                                          TAB: STATS                                                          */
 .sheet-title{
     display: flex;
@@ -114,6 +158,17 @@ button.sheet-tab{
 .sheet-att-check{
     width: 10%;
 }
+/*                                                          TAB: INFO                                                          */
+.sheet-info-title{
+  line-height: 1.5em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.sheet-info-description{
+  line-height: 1em;
+  font-size: 1em;
+}
+
 
 /*                                                          Roll Button                                                          */
 button[type=roll]{

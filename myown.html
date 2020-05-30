@@ -60,6 +60,10 @@
 <br />
 
 <!--                                                          Premiere tab: Attributes                                                          -->
+<!-- Mise en places de info-->
+<input type='hidden'  class='sheet-infotoggle' name='attr_sheetInfoTab' value='bt-endurance' />
+
+<!-- Attribues-->
 <div class='sheet-attributes'>
     <label class="sheet-title">Attributes</label>
     <br />
@@ -68,17 +72,18 @@
         <div class="sheet-att-souscolonne">
             <!--Force-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Force</label>
+                <button type="action" name="act_bt-force" class='sheet-info'>Force</button>
                 <input type="text" name='attr_force' value='0' class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                     value='&{template:stat} {{statname=Force}} {{statvalue= [[@{force-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_force-bonus" class='sheet-att-value' value="0" />
                 <input type="checkbox" name="attr_force-bonus-check" checked="true" class="sheet-att-check" value="1" />
             </div>
+            
 
             <!--Endurance-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Endurance</label>
+                <button type="action" name="act_bt-endurance" class='sheet-info'>Endurance</button>
                 <input type="text" name='attr_endurance'value="0" class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Endurance}} {{statvalue= [[@{endurance-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -86,9 +91,11 @@
                 <input type="checkbox" name="attr_endurance-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
             </div>
+            
             <!--Présence-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Présence</label><input type="text" name='attr_presence' value="0" 
+                <button type="action" name="act_bt-presence" class='sheet-info'>Présence</button>
+                <input type="text" name='attr_presence' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Présence}} {{statvalue= [[@{presence-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -96,9 +103,11 @@
                 <input type="checkbox" name="attr_presence-bonus-check" checked="true" class="sheet-att-check"
                     value="1" />
             </div>
+            <div class="sheet-info-presence">Présence</div>
             <!--Forge-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Arti.Complex</label><input type="text" name='attr_forge' value="0" 
+                <button type="action" name="act_bt-forge" class='sheet-info'>Arti. Complex</button>
+                <input type="text" name='attr_forge' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Atri. Complex}} {{statvalue= [[@{forge-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -110,7 +119,8 @@
         <div class="sheet-att-souscolonne">
             <!--Intelligence-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Intelligence</label><input type="text" name='attr_intelligence' value="0" 
+                <button type="action" name="act_bt-intelligence" class='sheet-info'>Intelligence</button>
+                <input type="text" name='attr_intelligence' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Intelligence}} {{statvalue= [[@{intelligence-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -121,7 +131,8 @@
             <br />
             <!--Magie-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Magie</label><input type="text" name='attr_magie' class='sheet-att-value' value="0" >
+                <button type="action" name="act_bt-magie" class='sheet-info'>Magie</button>
+                <input type="text" name='attr_magie' class='sheet-att-value' value="0" >
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Magie}} {{statvalue= [[@{magie-result}]]}} {{jet= [[1d100]]}}'></button>
                 <input type="number" name="attr_magie-bonus" class='sheet-att-value' value="0" />
@@ -130,7 +141,8 @@
             <br />
             <!--Érudition-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Érudition</label><input type="text" name='attr_erudition' value="0" 
+                <button type="action" name="act_bt-erudition" class='sheet-info'>Érudition</button>
+                <input type="text" name='attr_erudition' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Érudition}} {{statvalue= [[@{erudition-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -141,7 +153,8 @@
             <br />
             <!--Alchimie-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Alchimie</label><input type="text" name='attr_alchimie' value="0" 
+                <button type="action" name="act_bt-alchimie" class='sheet-info'>Alchimie</button>
+                <input type="text" name='attr_alchimie' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Alchimie}} {{statvalue= [[@{alchimie-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -155,7 +168,8 @@
         <div class="sheet-att-souscolonne">
             <!--Agilité-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Agilité</label><input type="text" name='attr_agilite' value="0" 
+                <button type="action" name="act_bt-agilite" class='sheet-info'>Agilité</button>
+                <input type="text" name='attr_agilite' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Agilité}} {{statvalue= [[@{agilite-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -166,7 +180,8 @@
             <br />
             <!--Discrétion-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Discrétion</label><input type="text" name='attr_discretion' value="0" 
+                <button type="action" name="act_bt-discretion" class='sheet-info'>Discrétion</button>
+                <input type="text" name='attr_discretion' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Discretion}} {{statvalue= [[@{discretion-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -178,7 +193,8 @@
 
             <!--Perception-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Perception</label><input type="text" name='attr_perception' value="0" 
+                <button type="action" name="act_bt-perception" class='sheet-info'>Perception</button>
+                <input type="text" name='attr_perception' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Perception}} {{statvalue= [[@{perception-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -189,7 +205,8 @@
             <br />
             <!--Ébeniste-->
             <div class="sheet-att-row">
-                <label class="sheet-att-name">Arti. Simple</label><input type="text" name='attr_ebeniste' value="0" 
+                <button type="action" name="act_bt-ebeniste" class='sheet-info'>Arti. Simple</button>
+                <input type="text" name='attr_ebeniste' value="0" 
                     class='sheet-att-value'>
                 <button type='roll' name='roll_testattack' class="sheet-att-roll-button"
                 value='&{template:stat} {{statname=Arti. Simple}} {{statvalue= [[@{ebeniste-result}]]}} {{jet= [[1d100]]}}'></button>
@@ -200,6 +217,20 @@
         </div>
     </div>
 </div>
+
+<!--Info des Attribus-->
+<div class="sheet-info-force"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Force description</div></div>
+<div class="sheet-info-endurance"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Endurance description</div></div>
+<div class="sheet-info-presence"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Présence description</div></div>
+<div class="sheet-info-forge"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Atisanat Complexe description</div></div>
+<div class="sheet-info-intelligence"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Intelligence description</div></div>
+<div class="sheet-info-magie"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Magie description</div></div>
+<div class="sheet-info-erudition"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Érudition description</div></div>
+<div class="sheet-info-alchimie"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Alchimie description</div></div>
+<div class="sheet-info-agilite"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Agilité description</div></div>
+<div class="sheet-info-discretion"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Discretion description</div></div>
+<div class="sheet-info-perception"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Perception description</div></div>
+<div class="sheet-info-ebeniste"><div class="sheet-info-title">Description de l'attribue:</div><div class="sheet-info-description">Artisanat Simple description</div></div>
 
 <!--                                                          Deuxième tab: Inventaire                                                          -->
 <div class='sheet-inventaire'>
@@ -299,7 +330,7 @@
             <label class="sheet-debug-code">Debug WIP:</label>
             <input type="text" name='attr_debug-WIP' class="sheet-debug-value" />
         </div>
-        <label class="sheet-debug-code">Version: 1.3.6</label>
+        <label class="sheet-debug-code">Version: 1.3.8</label>
     </div>
 </div>
 
@@ -327,6 +358,37 @@ on("sheet:opened", function(){
     });
 
 </script>
+
+<!--Info Script-->
+<script type="text/worker">
+    const buttonlist = ["bt-force","bt-endurance","bt-presence","bt-forge","bt-intelligence","bt-magie","bt-erudition","bt-alchimie","bt-agilite","bt-discretion","bt-perception","bt-ebeniste",];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function () {
+            
+            setAttrs({
+                "debug": "01-00"
+            });
+            getAttrs(["sheetInfoTab"], function (values) {                
+                let infotab = (values["sheetInfoTab"]);
+                let varbutton = button;
+                if (infotab == varbutton) {
+                setAttrs({
+                    "sheetInfoTab": "none",
+                    "debug": "01-01"
+                });
+            }
+            
+                else {
+                    setAttrs({
+                        "sheetInfoTab": button,
+                        "debug": "01-02"
+                    });
+                }
+            });
+        });
+    });
+</script>
+
 
 <!--Multi Calcul Stat-->
 <script type="text/worker">
