@@ -85,6 +85,18 @@ button.sheet-tab{
 	display: block;
 }
 
+/* siwtch tabs GM Public */
+.sheet-attributes-public,
+.sheet-switch-gm:checked ~ .sheet-attributes-gm {
+  display: block;
+}
+
+.sheet-attributes-gm,
+.sheet-switch-gm:checked ~ .sheet-attributes-public {
+  display: none;
+}
+
+
 /*                                                          TABS INFO SETUP                                                          */
 button.sheet-info{
   display: flex;
@@ -158,6 +170,36 @@ button.sheet-info{
 .sheet-att-check{
     width: 10%;
 }
+.sheet-att-jet-checker,
+.sheet-att-gm-checker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+.sheet-att-jet-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px black solid;
+  width: 10%;
+  line-height: 1.3em;
+  font-size: 0.9em;
+}
+
+.sheet-att-gm-box {
+  display: flex;
+  align-items: center;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+  width: 10%;
+  line-height: 1.3em;
+  font-size: 0.9em;
+}
+
+.sheet-att-gm-jet {
+  padding: 3px;
+}
 /*                                                          TAB: INFO                                                          */
 .sheet-info-title{
   line-height: 1.5em;
@@ -180,7 +222,10 @@ button[type=roll].sheet-att-roll-button::before {
     content: '0';
   
 }
+button[type=roll].sheet-att-roll-button-gm::before {
+  content: 'A';
 
+}
 /*                                                          TAB: Inventaire                                                          */
 .sheet-inv-row{
     display: flex;
